@@ -9,19 +9,17 @@ class Productlist extends Component {
         return (
            <React.Fragment>
                <div className="py-5">
-                   <div className="container">
+                   <div className="container ">
                        <Tittle name="our" tittle="products"/>
                        <div className="row">
+                           <ProductConsumer>
+                               {value=>{
+                                   return value.products.map(product=>{
+                                       return <Product key={product.id} prodcut={product}/>
+                                   })
+                               }}
+                           </ProductConsumer>
                        </div>
-
-                       <ProductConsumer>
-                           {value=>{
-                               return value.products.map(product=>{
-                                   return <Product key={product.id} prodcut={product}/>
-                               })
-                           }}
-                       </ProductConsumer>
-
                    </div>
                </div>
            </React.Fragment>

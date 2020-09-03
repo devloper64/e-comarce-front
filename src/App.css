@@ -7,10 +7,14 @@
 
 }
 
+
 body{
-  background:  var(--mainWhite) !important;
+    scroll-padding-top: 70px; /* height of sticky header */
+
+    background:  var(--mainWhite) !important;
   color: var(--mainDark) !important;
 }
+
 
 .text-title{
   letter-spacing: 0.3rem;
